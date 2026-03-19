@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fee Structure 2026-27 | TechVista Institute</title>
+    <title>Learntech Fee Structure 2026-27</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -48,35 +48,67 @@
             border-radius: 16px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
             padding: 10px;
-            margin-bottom: 25px;
+            margin-bottom: 5px;
+        }
+
+        .tagline {
+            display: block;
+            text-align: center;
+            font-weight: 800;
+            font-size: 0.90rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #0c214b;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            .tagline {
+                font-size: 0.75rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tagline {
+                font-size: 0.65rem;
+                letter-spacing: 0.8px;
+            }
         }
 
         .logo-section {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-
-        .company-info h1 {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 5px;
-        }
-
-        .company-info p {
-            font-size: 1rem;
-            color: var(--text-light);
-            margin-bottom: 0;
-        }
-
-        .badges-container {
-            display: flex;
-            justify-content: center;
             gap: 10px;
-            flex-wrap: wrap;
+            margin-bottom: 0px;
+        }
+
+        .company-logo {
+            width: 300px;
+            height: 100px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .logo-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 5px;
+        }
+
+
+        /* If you want the logo without background gradient */
+        .company-logo.no-bg {
+            background: transparent;
+        }
+
+        .company-logo.no-bg .logo-image {
+            padding: 0;
         }
 
         .badge-custom {
@@ -98,7 +130,7 @@
             text-align: center;
             padding: 8px;
             border-radius: 12px;
-            margin-bottom: 25px;
+            margin-bottom: 5px;
             box-shadow: 0 8px 30px rgba(255, 255, 255, 0.3);
             border: 1px solid rgba(255, 255, 255, 0.712);
         }
@@ -115,12 +147,12 @@
             background: white;
             border-radius: 16px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-            padding: 35px;
+            padding: 10px 20px 5px 20px;
         }
 
         /* Dropdown Section */
         .dropdown-section {
-            margin-bottom: 35px;
+            margin-bottom: 5px;
         }
 
         .form-label {
@@ -133,13 +165,23 @@
         }
 
         .form-select {
-            border: 2px solid #1f448f;
+            border: 1.5px solid #1f448fa8;
             border-radius: 10px;
             padding: 7px 10px;
             font-size: 0.95rem;
             color: var(--text-dark);
             transition: all 0.3s ease;
             background-color: white;
+        }
+
+        .custom-select {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .custom-select option[value=""] {
+            color: #999;
+            /* looks like placeholder */
         }
 
         .form-select:focus {
@@ -154,11 +196,9 @@
         /* Course Title */
         .course-title {
             color: var(--primary-color);
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             font-weight: 700;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 3px solid var(--secondary-color);
+            margin-top: 10px;
         }
 
         /* Table Styling */
@@ -183,7 +223,7 @@
         }
 
         .fee-table thead th {
-            padding: 16px;
+            padding: 10px;
             text-align: center;
             font-weight: 600;
             font-size: 0.9rem;
@@ -191,7 +231,7 @@
             border: none;
             white-space: nowrap;
         }
-        
+
 
         .fee-table thead th:first-child {
             border-top-left-radius: 12px;
@@ -202,21 +242,13 @@
         }
 
         .fee-table tbody td {
-            padding: 16px;
+            padding: 8px;
             text-align: center;
             border: 1px solid #d1d5db;
             vertical-align: middle;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             font-weight: 500;
         }
-         /* .fee-table thead th {
-            padding: 16px;
-            text-align: center;
-            border: 1px solid #d1d5db;
-            vertical-align: middle;
-            font-size: 0.95rem;
-            font-weight: 500;
-        } */
 
         .fee-table tbody td:first-child {
             text-align: left;
@@ -288,12 +320,15 @@
         .scholarship-box {
             background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
             border-left: 4px solid var(--accent-color);
-            padding: 20px;
+            border-right: 4px solid var(--accent-color);
+            padding: 10px;
             border-radius: 10px;
             margin-bottom: 20px;
         }
 
         .scholarship-box p {
+            font-size: 14px;
+            text-align: center;
             color: #92400e;
             margin: 0;
             line-height: 1.6;
@@ -301,18 +336,20 @@
         }
 
         .scholarship-box strong {
-            font-weight: 700;
+            font-weight: 500;
         }
 
         .info-box {
             background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
             border-left: 4px solid #3b82f6;
-            padding: 20px;
+            border-right: 4px solid #3b82f6;
+            padding: 10px;
             border-radius: 10px;
             text-align: center;
         }
 
         .info-box p {
+            font-size: 14px;
             color: #1e40af;
             margin: 0;
             line-height: 1.8;
@@ -397,38 +434,9 @@
                     <img src="media/Leantech_logo (1).svg" alt="TechVista Logo" class="logo-image">
                 </div>
             </div>
-            <style>
-                .company-logo {
-                    width: 300px;
-                    height: 100px;
-                    border-radius: 12px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    overflow: hidden;
-                    flex-shrink: 0;
-                }
 
-                .logo-image {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: contain;
-                    padding: 5px;
-                }
-
-                /* If you want the logo without background gradient */
-                .company-logo.no-bg {
-                    background: transparent;
-                }
-
-                .company-logo.no-bg .logo-image {
-                    padding: 0;
-                }
-            </style>
             <div class="badges-container">
-                <span class="badge-custom">AICTE Approved</span>
-                <span class="badge-custom">ISO 9001:2015 Certified</span>
-                <span class="badge-custom">Industry Partnerships</span>
+                <span class="tagline">India’s first ISO Certified Educational Consultancy</span>
             </div>
         </div>
 
@@ -443,41 +451,85 @@
             <div class="dropdown-section">
                 <div class="row g-3">
                     <div class="col-lg-3 col-md-6">
-                        <label for="collegeSelect" class="form-label">College</label>
-                        <select class="form-select" id="collegeSelect">
-                            <option value="">Select College</option>
-                            <option value="main">Main Campus - TechVista</option>
-                            <option value="north">North Campus - TechVista</option>
-                            <option value="south">South Campus - TechVista</option>
+                        <label for="collegeSelect" class="form-label">Colleges / UNIVERSITY</label>
+                        <select class="form-select custom-select" id="collegeSelect">
+
+                            <option value="">Select Colleges/University</option>
+                            <option value="svyasa-blr">S-VYASA University, Bangalore</option>
+                            <option value="svyasa-kerala">S-VYASA University Kerala (Upcoming Campus)</option>
+                            <option value="svyasa-yoga">S-VYASA University (Yoga Campus)</option>
+
+                            <option value="yenepoya-blr">Yenepoya University, Bangalore</option>
+                            <option value="srinivas-mlr">Srinivas University</option>
+                            <option value="cvv-kochi">Chinmaya Vishwa Vidyapeeth (CVV), Kochi</option>
+
+                            <option value="devaraj-kolar">Sri Devaraj URS, Kolar</option>
+                            <option value="svdental-blr">Sri Venkateshwara Dental College, Bangalore</option>
+
+                            <option value="bgs-sjb-blr">BGS and SJB Group of Institutions, Bangalore</option>
+                            <option value="rv-mysuru">RV University, Mysuru</option>
+
+                            <option value="srisri-blr">GIBS Business School, Bangalore </option>
+                            <option value="gibs-blr">GIBS Business School, Bangalore </option>
+                            <option value="alliance-ascent">Alliance Ascent College, Bangalore</option>
                         </select>
                     </div>
 
                     <div class="col-lg-3 col-md-6">
                         <label for="departmentSelect" class="form-label">Department</label>
-                        <select class="form-select" id="departmentSelect">
+                        <select class="form-select custom-select" id="departmentSelect">
                             <option value="">Select Department</option>
                             <option value="engineering">Department of Engineering</option>
                             <option value="management">Department of Management</option>
                             <option value="sciences">Department of Sciences</option>
+
+                            <option value="csit">Department of Computer Science and Information Technology</option>
+                            <option value="business">Department of Business and Management</option>
+                            <option value="commerce">Department of Commerce</option>
+                            <option value="fashion">Department of Fashion Design</option>
+                            <option value="product-design">Department of Product and Industrial Design</option>
+                            <option value="communication-design">Department of Communication Design</option>
+                            <option value="game-design">Department of Game Design</option>
+                            <option value="interior-architecture">Department of Interior & Architecture Design</option>
+                            <option value="animation-film">Department of Animation & Film Design</option>
+                            <option value="advanced-studies">Department of Advanced Studies</option>
+                            <option value="global-design">Department of Global Design</option>
+                            <option value="allied-healthcare">Department of Allied Healthcare</option>
                         </select>
                     </div>
 
                     <div class="col-lg-3 col-md-6">
                         <label for="degreeSelect" class="form-label">Degree</label>
-                        <select class="form-select" id="degreeSelect">
+                        <select class="form-select custom-select" id="degreeSelect">
                             <option value="">Select Degree</option>
                             <option value="btech">B.Tech</option>
-                            <option value="mtech">M.Tech</option>
+                            <option value="bba">BBA</option>
+                            <option value="bca">BCA</option>
+                            <option value="bcom">B.Com</option>
                             <option value="mba">MBA</option>
-                            <option value="bsc">B.Sc</option>
+                            <option value="mca">MCA</option>
                         </select>
                     </div>
 
                     <div class="col-lg-3 col-md-6">
                         <label for="courseSelect" class="form-label">Course</label>
-                        <select class="form-select" id="courseSelect">
+                        <select class="form-select custom-select" id="courseSelect">
                             <option value="">Select Course</option>
                             <option value="cse">B.Tech Computer Science and Engineering</option>
+                            <option value="cse-aiml">B.Tech Computer Science and Engineering (Artificial Intelligence &
+                                Machine Learning)</option>
+                            <option value="cse-iot">B.Tech Computer Science and Engineering (Internet of Things, Cyber
+                                Security & Blockchain Technology)</option>
+                            <option value="cse-ds">B.Tech Computer Science and Engineering (Data Science)</option>
+                            <option value="cse-ai">B.Tech Computer Science and Engineering (Artificial Intelligence)
+                            </option>
+
+                            <option value="btech-aiml">B.Tech (Artificial Intelligence & Machine Learning)</option>
+                            <option value="btech-aids">B.Tech (Artificial Intelligence & Data Science)</option>
+                            <option value="btech-rai">B.Tech (Robotics & Artificial Intelligence)</option>
+                            <option value="btech-ece">B.Tech (Electronics & Communication Engineering)</option>
+                            <option value="btech-robotics">B.Tech (Robotics & Automation)</option>
+
                             <option value="ece">B.Tech Electronics and Communication Engineering</option>
                             <option value="me">B.Tech Mechanical Engineering</option>
                             <option value="ce">B.Tech Civil Engineering</option>
@@ -509,16 +561,15 @@
                 </div>
 
                 <div class="scholarship-box">
-                    <p><strong>📚 Scholarship Information:</strong> Scholarship of 20% for students from the Northeast
-                        (Arunachal Pradesh, Assam, Manipur, Meghalaya, Mizoram, Nagaland, Tripura, and Sikkim) and Jammu
-                        and Kashmir.</p>
+                    <p><strong>Scholarship of 20% for students from the Northeast (Arunachal Pradesh, Assam, Manipur,
+                            Meghalaya, Mizoram, Nagaland, Tripura, and Sikkim) and Jammu and Kashmir.</p>
                 </div>
 
                 <div class="info-box">
                     <p>
-                        <strong>Registration Fee for All Courses - INR 25,000</strong><br>
-                        (Inclusive of Non-Refundable Administrative Charge - INR 10,000)<br>
-                        <strong>+ Application Fee - INR 1,000</strong>
+                        <strong>Registration Fee for All Courses - INR 25,000 (Inclusive of Non-Refundable
+                            Administrative Charge - INR 10,000)<br>
+                            + Application Fee - INR 1,000</strong>
                     </p>
                 </div>
             </div>
