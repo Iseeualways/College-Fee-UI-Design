@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fee Structure 2026-27 | TechVista Institute</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #3b82f6;
+            --accent-color: #f59e0b;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --border-color: #e5e7eb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1f448f 0%, #5672ab 100%);
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+
+        .main-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Section */
+        .header-card {
+            background: rgb(255, 255, 255);
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            padding: 10px;
+            margin-bottom: 25px;
+        }
+
+        .logo-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .company-info h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .company-info p {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-bottom: 0;
+        }
+
+        .badges-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .badge-custom {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Fee Banner */
+        .fee-banner {
+            background: linear-gradient(90deg, #e53340 0%, #1f448f 100%);
+            color: white;
+            text-align: center;
+            padding: 8px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 30px rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.712);
+        }
+
+        .fee-banner h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+
+        /* Content Card */
+        .content-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            padding: 35px;
+        }
+
+        /* Dropdown Section */
+        .dropdown-section {
+            margin-bottom: 35px;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .form-select {
+            border: 2px solid #1f448f;
+            border-radius: 10px;
+            padding: 9px 10px;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            background-color: white;
+        }
+
+        .form-select:focus {
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.15);
+        }
+
+        .form-select:hover {
+            border-color: #e53340;
+        }
+
+        /* Course Title */
+        .course-title {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--secondary-color);
+        }
+
+        /* Table Styling */
+        .fee-table-container {
+            overflow-x: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 25px;
+        }
+
+        .fee-table {
+            width: 100%;
+            margin-bottom: 0;
+            background: white;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        .fee-table thead {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: white;
+        }
+
+        .fee-table thead th {
+            padding: 16px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            border: none;
+            white-space: nowrap;
+        }
+        
+
+        .fee-table thead th:first-child {
+            border-top-left-radius: 12px;
+        }
+
+        .fee-table thead th:last-child {
+            border-top-right-radius: 12px;
+        }
+
+        .fee-table tbody td {
+            padding: 16px;
+            text-align: center;
+            border: 1px solid #d1d5db;
+            vertical-align: middle;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+         /* .fee-table thead th {
+            padding: 16px;
+            text-align: center;
+            border: 1px solid #d1d5db;
+            vertical-align: middle;
+            font-size: 0.95rem;
+            font-weight: 500;
+        } */
+
+        .fee-table tbody td:first-child {
+            text-align: left;
+            font-weight: 600;
+            color: white;
+        }
+
+        /* Row Colors matching the image */
+        .fee-table tbody tr:nth-child(1) td {
+            background-color: #bbf7d0;
+            /* Light green */
+            color: #166534;
+        }
+
+        .fee-table tbody tr:nth-child(1) td:first-child {
+            background-color: #1e3a8a;
+            /* Dark blue for quota column */
+            color: white;
+        }
+
+        .fee-table tbody tr:nth-child(1) td:last-child {
+            background-color: #1e3a8a;
+            /* Dark blue for total column */
+            color: white;
+        }
+
+        .fee-table tbody tr:nth-child(2) td {
+            background-color: #fef08a;
+            /* Light yellow */
+            color: #854d0e;
+        }
+
+        .fee-table tbody tr:nth-child(2) td:first-child {
+            background-color: #1e3a8a;
+            /* Dark blue for quota column */
+            color: white;
+        }
+
+        .fee-table tbody tr:nth-child(2) td:last-child {
+            background-color: #1e3a8a;
+            /* Dark blue for total column */
+            color: white;
+        }
+
+        .fee-table tbody tr:nth-child(3) td {
+            background-color: #fecaca;
+            /* Light pink/red */
+            color: #991b1b;
+        }
+
+        .fee-table tbody tr:nth-child(3) td:first-child {
+            background-color: #1e3a8a;
+            /* Dark blue for quota column */
+            color: white;
+        }
+
+        .fee-table tbody tr:nth-child(3) td:last-child {
+            background-color: #1e3a8a;
+            /* Dark blue for total column */
+            color: white;
+        }
+
+        .fee-table tbody tr:hover td {
+            filter: brightness(0.95);
+            transition: filter 0.2s ease;
+        }
+
+        /* Info Boxes */
+        .scholarship-box {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 4px solid var(--accent-color);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .scholarship-box p {
+            color: #92400e;
+            margin: 0;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .scholarship-box strong {
+            font-weight: 700;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            border-left: 4px solid #3b82f6;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .info-box p {
+            color: #1e40af;
+            margin: 0;
+            line-height: 1.8;
+            font-weight: 500;
+        }
+
+        .info-box strong {
+            font-weight: 700;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .company-info h1 {
+                font-size: 1.5rem;
+            }
+
+            .company-info p {
+                font-size: 0.9rem;
+            }
+
+            .logo-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .badges-container {
+                justify-content: center;
+            }
+
+            .fee-banner h2 {
+                font-size: 1.3rem;
+                letter-spacing: 1px;
+            }
+
+            .content-card {
+                padding: 20px;
+            }
+
+            .course-title {
+                font-size: 1.1rem;
+            }
+
+            .fee-table thead th,
+            .fee-table tbody td {
+                padding: 10px 8px;
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+
+            .fee-table thead th,
+            .fee-table tbody td {
+                padding: 8px 5px;
+                font-size: 0.75rem;
+            }
+
+            .company-logo {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+            }
+
+            .badge-custom {
+                font-size: 0.7rem;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <!-- Header Section -->
+        <div class="header-card">
+            <div class="logo-section">
+                <div class="company-logo">
+                    <img src="media/Leantech_logo.svg" alt="TechVista Logo" class="logo-image">
+                </div>
+            </div>
+            <style>
+                .company-logo {
+                    width: 300px;
+                    height: 100px;
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+                    flex-shrink: 0;
+                }
+
+                .logo-image {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    padding: 5px;
+                }
+
+                /* If you want the logo without background gradient */
+                .company-logo.no-bg {
+                    background: transparent;
+                }
+
+                .company-logo.no-bg .logo-image {
+                    padding: 0;
+                }
+            </style>
+            <div class="badges-container">
+                <span class="badge-custom">AICTE Approved</span>
+                <span class="badge-custom">ISO 9001:2015 Certified</span>
+                <span class="badge-custom">Industry Partnerships</span>
+            </div>
+        </div>
+
+        <!-- Fee Banner -->
+        <div class="fee-banner">
+            <h2>FEE STRUCTURE 2026-27</h2>
+        </div>
+
+        <!-- Content Section -->
+        <div class="content-card">
+            <!-- Dropdown Section -->
+            <div class="dropdown-section">
+                <div class="row g-3">
+                    <div class="col-lg-3 col-md-6">
+                        <label for="collegeSelect" class="form-label">College</label>
+                        <select class="form-select" id="collegeSelect">
+                            <option value="">Select College</option>
+                            <option value="main">Main Campus - TechVista</option>
+                            <option value="north">North Campus - TechVista</option>
+                            <option value="south">South Campus - TechVista</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <label for="departmentSelect" class="form-label">Department</label>
+                        <select class="form-select" id="departmentSelect">
+                            <option value="">Select Department</option>
+                            <option value="engineering">Department of Engineering</option>
+                            <option value="management">Department of Management</option>
+                            <option value="sciences">Department of Sciences</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <label for="degreeSelect" class="form-label">Degree</label>
+                        <select class="form-select" id="degreeSelect">
+                            <option value="">Select Degree</option>
+                            <option value="btech">B.Tech</option>
+                            <option value="mtech">M.Tech</option>
+                            <option value="mba">MBA</option>
+                            <option value="bsc">B.Sc</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <label for="courseSelect" class="form-label">Course</label>
+                        <select class="form-select" id="courseSelect">
+                            <option value="">Select Course</option>
+                            <option value="cse">B.Tech Computer Science and Engineering</option>
+                            <option value="ece">B.Tech Electronics and Communication Engineering</option>
+                            <option value="me">B.Tech Mechanical Engineering</option>
+                            <option value="ce">B.Tech Civil Engineering</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fee Details Section -->
+            <div id="feeDetails" class="hidden">
+                <h2 class="course-title" id="courseTitle">B.TECH COMPUTER SCIENCE AND ENGINEERING</h2>
+
+                <div class="fee-table-container">
+                    <table class="table fee-table">
+                        <thead>
+                            <tr>
+                                <th style="background-color: rgb(190, 221, 250);">QUOTA</th>
+                                <th style="background-color: rgb(190, 221, 250);">1st YEAR</th>
+                                <th style="background-color: rgb(190, 221, 250);">2nd YEAR</th>
+                                <th style="background-color: rgb(190, 221, 250);">3rd YEAR</th>
+                                <th style="background-color: rgb(190, 221, 250);">4th YEAR</th>
+                                <th style="background-color: #1e3a8a; color: white;">TOTAL</th>
+                            </tr>
+                        </thead>
+                        <tbody id="feeTableBody">
+                            <!-- Populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="scholarship-box">
+                    <p><strong>📚 Scholarship Information:</strong> Scholarship of 20% for students from the Northeast
+                        (Arunachal Pradesh, Assam, Manipur, Meghalaya, Mizoram, Nagaland, Tripura, and Sikkim) and Jammu
+                        and Kashmir.</p>
+                </div>
+
+                <div class="info-box">
+                    <p>
+                        <strong>Registration Fee for All Courses - INR 25,000</strong><br>
+                        (Inclusive of Non-Refundable Administrative Charge - INR 10,000)<br>
+                        <strong>+ Application Fee - INR 1,000</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Fee data for different courses
+        const feeData = {
+            cse: {
+                title: "B.TECH COMPUTER SCIENCE AND ENGINEERING",
+                rows: [
+                    {
+                        quota: "MERIT FEES BASED ON ENTRANCE EXAM/<br>JEE MAINS/ COMEDK RANK (KARNATAKA)",
+                        year1: "₹3,50,000",
+                        year2: "₹3,50,000",
+                        year3: "₹3,50,000",
+                        year4: "₹3,50,000",
+                        total: "₹14,00,000"
+                    },
+                    {
+                        quota: "MERIT EXAM-BASED FEES (NORTHEAST AND JAMMU AND KASHMIR)",
+                        year1: "₹2,80,000",
+                        year2: "₹2,80,000",
+                        year3: "₹2,80,000",
+                        year4: "₹2,80,000",
+                        total: "₹11,20,000"
+                    },
+                    {
+                        quota: "OTHERS",
+                        year1: "₹5,00,000",
+                        year2: "₹5,00,000",
+                        year3: "₹5,00,000",
+                        year4: "₹5,00,000",
+                        total: "₹20,00,000"
+                    }
+                ]
+            },
+            ece: {
+                title: "B.TECH ELECTRONICS AND COMMUNICATION ENGINEERING",
+                rows: [
+                    {
+                        quota: "MERIT FEES BASED ON ENTRANCE EXAM/<br>JEE MAINS/ COMEDK RANK (KARNATAKA)",
+                        year1: "₹3,25,000",
+                        year2: "₹3,25,000",
+                        year3: "₹3,25,000",
+                        year4: "₹3,25,000",
+                        total: "₹13,00,000"
+                    },
+                    {
+                        quota: "MERIT EXAM-BASED FEES (NORTHEAST AND JAMMU AND KASHMIR)",
+                        year1: "₹2,60,000",
+                        year2: "₹2,60,000",
+                        year3: "₹2,60,000",
+                        year4: "₹2,60,000",
+                        total: "₹10,40,000"
+                    },
+                    {
+                        quota: "OTHERS",
+                        year1: "₹4,75,000",
+                        year2: "₹4,75,000",
+                        year3: "₹4,75,000",
+                        year4: "₹4,75,000",
+                        total: "₹19,00,000"
+                    }
+                ]
+            },
+            me: {
+                title: "B.TECH MECHANICAL ENGINEERING",
+                rows: [
+                    {
+                        quota: "MERIT FEES BASED ON ENTRANCE EXAM/<br>JEE MAINS/ COMEDK RANK (KARNATAKA)",
+                        year1: "₹3,00,000",
+                        year2: "₹3,00,000",
+                        year3: "₹3,00,000",
+                        year4: "₹3,00,000",
+                        total: "₹12,00,000"
+                    },
+                    {
+                        quota: "MERIT EXAM-BASED FEES (NORTHEAST AND JAMMU AND KASHMIR)",
+                        year1: "₹2,40,000",
+                        year2: "₹2,40,000",
+                        year3: "₹2,40,000",
+                        year4: "₹2,40,000",
+                        total: "₹9,60,000"
+                    },
+                    {
+                        quota: "OTHERS",
+                        year1: "₹4,50,000",
+                        year2: "₹4,50,000",
+                        year3: "₹4,50,000",
+                        year4: "₹4,50,000",
+                        total: "₹18,00,000"
+                    }
+                ]
+            },
+            ce: {
+                title: "B.TECH CIVIL ENGINEERING",
+                rows: [
+                    {
+                        quota: "MERIT FEES BASED ON ENTRANCE EXAM/<br>JEE MAINS/ COMEDK RANK (KARNATAKA)",
+                        year1: "₹2,75,000",
+                        year2: "₹2,75,000",
+                        year3: "₹2,75,000",
+                        year4: "₹2,75,000",
+                        total: "₹11,00,000"
+                    },
+                    {
+                        quota: "MERIT EXAM-BASED FEES (NORTHEAST AND JAMMU AND KASHMIR)",
+                        year1: "₹2,20,000",
+                        year2: "₹2,20,000",
+                        year3: "₹2,20,000",
+                        year4: "₹2,20,000",
+                        total: "₹8,80,000"
+                    },
+                    {
+                        quota: "OTHERS",
+                        year1: "₹4,25,000",
+                        year2: "₹4,25,000",
+                        year3: "₹4,25,000",
+                        year4: "₹4,25,000",
+                        total: "₹17,00,000"
+                    }
+                ]
+            }
+        };
+
+        // Get elements
+        const courseSelect = document.getElementById('courseSelect');
+        const feeDetails = document.getElementById('feeDetails');
+        const courseTitle = document.getElementById('courseTitle');
+        const feeTableBody = document.getElementById('feeTableBody');
+
+        // Event listener for course selection
+        courseSelect.addEventListener('change', function () {
+            const course = this.value;
+
+            if (course && feeData[course]) {
+                // Update title
+                courseTitle.textContent = feeData[course].title;
+
+                // Clear existing table rows
+                feeTableBody.innerHTML = '';
+
+                // Add new rows
+                feeData[course].rows.forEach(row => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${row.quota}</td>
+                        <td>${row.year1}</td>
+                        <td>${row.year2}</td>
+                        <td>${row.year3}</td>
+                        <td>${row.year4}</td>
+                        <td><strong>${row.total}</strong></td>
+                    `;
+                    feeTableBody.appendChild(tr);
+                });
+
+                // Show the fee details section with smooth animation
+                feeDetails.classList.remove('hidden');
+            } else {
+                // Hide fee details if no course selected
+                feeDetails.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+
+</html>
